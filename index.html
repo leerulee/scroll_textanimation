@@ -52,7 +52,7 @@ html{
 
 
   <lottie-player class="logo" src="logo_data.json" autoplay loop style="">
-  </lottie-player>
+
     
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
@@ -60,7 +60,7 @@ html{
      gsap.registerPlugin(ScrollTrigger);
 
      const ani9 = gsap.timeline();
-for (let i = 1; i <= 10; i++) {
+for (let i = 0; i <= 10; i++) {
     ani9.from(".text" + i, {opacity: 0.1});
 }
 
