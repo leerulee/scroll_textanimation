@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+ 
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  
+  <style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+html{
+  background-color: #efefef;
+}
+    body {
+      max-width:520px;
+      padding: 5%;
+      margin: 0 auto;
+    }
+    h1 {
+      display: inline;
+      line-height: 58px;
+      font-size:42px;
+      color: #313131;
+      font-family: 'Pretendard Variable';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Pretendard Variable'), url('./images/PretendardVariable.woff2') format('woff2-variations');
+
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+  <h1 class="text1">대법원에 대법관을 둔다.</h1>
+  <h1 class="text2">다만,</h1>
+  <h1 class="text3"> 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다.</h1>
+  <h1 class="text4"> 공공필요에 의한 재산권의</h1>
+  <h1 class="text5"> 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되,</h1>
+  <h1 class="text6"> 정당한 보상을 지급하여야 한다.</h1>
+    <h1 class="text7"> 행정권은 대통령을 수반으로 하는 정부에 속한다</h1>
+      <h1 class="text8">  모든 국민은 근로의 권리를 가진다.</h1>
+        <h1 class="text9"> 국가는 사회적·경제적 방법으로 </h1>
+          <h1 class="text10"> 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며,</h1>
+   <h1 class="text10">  법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</h1>
+
+
+  <lottie-player class="logo" src="/logo_data.json" autoplay loop style="">
+  </lottie-player>
+    
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script>
+     gsap.registerPlugin(ScrollTrigger);
+
+     const ani9 = gsap.timeline();
+for (let i = 1; i <= 10; i++) {
+    ani9.from(".text" + i, {opacity: 0.1});
+}
+
+ScrollTrigger.create({
+    animation: ani9,
+    trigger: "body",
+    start: "top top",
+    end: "+=5000",
+    scrub: true,
+    pin: true,
+    markers: false,
+    anticipatePin: 1
+});
+
+
+LottieInteractivity.create({
+    player: '.logo',
+    mode: 'scroll',
+    actions: [
+    
+    {
+          visibility: [0, 0],
+          type: "stop",
+          frames: [0]
+      },
+      {
+          visibility: [0.3, 1.0],
+          type: "seek",
+          frames: [0, 300]
+      }
+    ]
+  });
+  </script>
+</body>
+</html>
